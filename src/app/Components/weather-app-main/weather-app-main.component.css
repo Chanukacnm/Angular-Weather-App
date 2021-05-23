@@ -1,0 +1,177 @@
+#divWeatherMain{
+    display: inline-block;
+    border-radius: 10px;
+    width: 250px;
+    height: 380px;
+    background: rgb(0,0,0);
+    background: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgb(17, 13, 119) 75%, rgb(22, 97, 146) 100%);
+    color: white;;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding-top: 20px;
+    margin-left: 50px;
+}
+
+#divWeatherMain2{
+    display: inline-block;
+    border-radius: 10px;
+    width: 250px;
+    height: 380px;
+    background: rgb(0,0,0);
+    background: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgb(60, 18, 85) 75%, rgb(90, 15, 151) 100%);
+    color: white;;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding-top: 20px;
+    margin-left: 10%;
+}
+
+#divWeatherMain3{
+    display: inline-block;
+    border-radius: 10px;
+    width: 250px;
+    height: 380px;
+    background: rgb(0,0,0);
+    background: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgb(24, 83, 27) 75%, rgb(21, 146, 17) 100%);
+    color: white;;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding-top: 20px;
+    margin-left: 10%;
+}
+
+#divWeatherMain4{
+    display: inline-block;
+    border-radius: 10px;
+    width: 250px;
+    height: 380px;
+    background: rgb(0,0,0);
+    background: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgb(72, 78, 16) 75%, rgb(146, 160, 22) 100%);
+    color: white;;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding-top: 20px;
+    margin-left: 15%;
+}
+
+#divWeatherMain5{
+    display: inline-block;
+    border-radius: 10px;
+    width: 250px;
+    height: 380px;
+    background: rgb(0,0,0);
+    background: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgb(85, 13, 13) 75%, rgb(177, 17, 17) 100%);
+    color: white;;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding-top: 20px;
+    margin-left: 15%;
+}
+
+#application{
+    background: linear-gradient(to bottom right, #333399 0%, #9900cc 100%);
+}
+
+#Weatherapp{
+    padding: 50px;
+    margin-left: 10%;
+}
+
+#Weatherapp2{
+    padding: 50px;
+    margin-left: 10%;
+}
+
+.weatherWidgetRow{
+    margin:0 auto;
+    width: fit-content;
+    
+}
+
+#weatherapprow2{
+    margin:0 auto;
+    width: fit-content;
+    display: block;
+    padding-top: 20px;
+}
+
+#inputtext{
+    padding: 5px;
+    font-size: 17px;
+    border: 1px solid grey;
+    background: #3a3a3a;
+    color: white;
+    border-radius: 8px;
+    
+}
+
+#subButton{
+    padding: 5px;
+    background: #8227cc;
+    color: white;
+    font-size: 17px;
+    border: 1px solid#891ce2;
+    border-radius: 8px;
+    border-left: none;
+    cursor: pointer;
+}
+
+
+.sun{
+    margin-top: 10px;
+    color: yellow;
+    filter: drop-shadow( 1px 1px 10px yellow);
+}
+
+.moon{
+    margin-top: 10px;
+    color: white;
+    filter: drop-shadow( 1px 1px 10px white);
+}
+
+.cloudDiv{
+    margin-top: -40px;
+}
+
+
+
+.cloud1{
+    color: rgb(104, 175, 197);
+    filter: drop-shadow( 1px 1px 5px rgb(104, 175, 197));
+    animation-name: cloudMovement;
+    animation-iteration-count: infinite;
+    animation-duration: 10s;
+    animation-timing-function: ease-in-out;
+    animation-direction: alternate;
+}
+
+
+.cloud2{
+    color: rgb(104, 175, 197);
+    filter: drop-shadow( 1px 1px 5px rgb(104, 175, 197));
+    animation-name: cloudMovement2;
+    animation-iteration-count: infinite;
+    animation-duration: 10s;
+    animation-timing-function: ease-in-out;
+    animation-direction: alternate;
+}
+
+.weatherimage{
+    height: 30px;
+    margin-top: 5px;
+    
+    /* display: block;
+    margin-left: auto;
+    margin-right: auto; */
+    
+}
+.rows3{
+    display: inline-block;
+    margin-left: 24%;
+}
+
+@keyframes cloudMovement{
+    from{margin-left: -45px;}
+    to{margin-left: 65px;}
+}
+
+@keyframes cloudMovement2{
+    from{margin-left: 55px;}
+    to{margin-left: 130px;}
+}
+

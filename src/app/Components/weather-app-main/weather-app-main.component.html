@@ -1,0 +1,166 @@
+  
+<div id="application">
+  
+  <div id="weatherapprow2">
+    <input type="text" id="inputtext" placeholder="Enter a city">
+    <button type="submit" id="subButton">Add a City</button>
+  </div>
+  
+  <div id="Weatherapp">
+    <div id="divWeatherMain">
+      <div *ngIf="WeatherData.isDay" class="weatherWidgetRow">
+        <i class="fas fa-3x fa-sun sun"></i>  
+      </div>   
+      <div *ngIf="!WeatherData.isDay" class="weatherWidgetRow">
+        <i class="fas fa-3x fa-moon moon"></i>  
+      </div>   
+      <div class="weatherWidgetRow cloudDiv">
+        <i class="fas fa-cloud fa-3x cloud1"></i>
+      </div>
+      
+      <div class="weatherWidgetRow" style="font-size: 25px;margin-top: 10px;">{{WeatherData.name}},{{WeatherData.country}}</div>
+      
+      <div class="weatherWidgetRow" style="font-size: 9px;">{{WeatherData.time_date}}</div>
+      <div class="weatherWidgetRow" style="font-size: 37px;margin-top: 5px;"><b>{{WeatherData.temp_celcius}}°c</b></div>
+      <div class="weatherWidgetRow" style="font-size: 11px;margin-top: 2px;">Temp Min: {{WeatherData.temp_min}}°c</div>
+      <div class="weatherWidgetRow" style="font-size: 11px;margin-top: 2px;">Temp Max: {{WeatherData.temp_max}}°c</div>
+      <div class="rows3">
+        <div class="weatherWidgetRow" style="font-size: 12px; "><img class="weatherimage" src="http://openweathermap.org/img/w/{{WeatherData.temp_feels_like_icon}}.png"/> {{WeatherData.temp_feels_like}} </div>
+      </div>
+      <hr width="70% "style="border-top: 1px solid white;" >
+      <div class="weatherWidgetRow" style="font-size: 12px; margin-top: 8px;">Pressure: {{WeatherData.pressure}} hPa</div>
+      <div class="weatherWidgetRow" style="font-size: 12px; margin-top: 0.2px;">Humidity: {{WeatherData.main.humidity}}%</div>
+      <div class="weatherWidgetRow" style="font-size: 12px; margin-top: 0.2px;">visibility: {{WeatherData.visibility}} km</div>
+    
+      <hr width="70% "style="border-top: 1px solid white;" >
+      <div class="weatherWidgetRow" style="font-size: 12px; margin-top: 0.2px;">Sunrise: {{WeatherData.sunrise_time}}</div>
+      <div class="weatherWidgetRow" style="font-size: 12px; margin-top: 0.2px;">Sunset: {{WeatherData.sunset_time}} </div>
+    </div>
+  
+    <div id="divWeatherMain2">
+      <div *ngIf="WeatherDataJPN.isDay" class="weatherWidgetRow">
+        <i class="fas fa-3x fa-sun sun"></i>  
+      </div>   
+      <div *ngIf="!WeatherDataJPN.isDay" class="weatherWidgetRow">
+        <i class="fas fa-3x fa-moon moon"></i>  
+      </div>   
+      <div class="WeatherDataJPN cloudDiv">
+        <i class="fas fa-cloud fa-3x cloud2"></i>
+      </div>
+      
+      <div class="weatherWidgetRow" style="font-size: 25px;margin-top: 10px;">{{WeatherDataJPN.name}},{{WeatherDataJPN.country}}</div>
+      
+      <div class="weatherWidgetRow" style="font-size: 9px;">{{WeatherDataJPN.time_date}}</div>
+      <div class="weatherWidgetRow" style="font-size: 37px;margin-top: 5px;"><b>{{WeatherDataJPN.temp_celcius}}°c</b></div>
+      <div class="weatherWidgetRow" style="font-size: 11px;margin-top: 2px;">Temp Min: {{WeatherDataJPN.temp_min}}°c</div>
+      <div class="weatherWidgetRow" style="font-size: 11px;margin-top: 2px;">Temp Max: {{WeatherDataJPN.temp_max}}°c</div>
+      <div class="rows3">
+        <div class="weatherWidgetRow" style="font-size: 12px; "><img class="weatherimage" src="http://openweathermap.org/img/w/{{WeatherDataJPN.temp_feels_like_icon}}.png"/> {{WeatherDataJPN.temp_feels_like}} </div>
+      </div>
+      <hr width="70% "style="border-top: 1px solid white;" >
+      <div class="weatherWidgetRow" style="font-size: 12px; margin-top: 8px;">Pressure: {{WeatherDataJPN.pressure}} hPa</div>
+      <div class="weatherWidgetRow" style="font-size: 12px; margin-top: 0.2px;">Humidity: {{WeatherDataJPN.main.humidity}}%</div>
+      <div class="weatherWidgetRow" style="font-size: 12px; margin-top: 0.2px;">visibility: {{WeatherDataJPN.visibility}} km</div>
+    
+      <hr width="70% "style="border-top: 1px solid white;" >
+      <div class="weatherWidgetRow" style="font-size: 12px; margin-top: 0.2px;">Sunrise: {{WeatherDataJPN.sunrise_time}}</div>
+      <div class="weatherWidgetRow" style="font-size: 12px; margin-top: 0.2px;">Sunset: {{WeatherDataJPN.sunset_time}} </div>
+    </div>
+  
+    <div id="divWeatherMain3">
+      <div *ngIf="WeatherDataENG.isDay" class="weatherWidgetRow">
+        <i class="fas fa-3x fa-sun sun"></i>  
+      </div>   
+      <div *ngIf="!WeatherDataENG.isDay" class="weatherWidgetRow">
+        <i class="fas fa-3x fa-moon moon"></i>  
+      </div>   
+      <div class="WeatherDataENG cloudDiv">
+        <i class="fas fa-cloud fa-3x cloud2"></i>
+      </div>
+      
+      <div class="weatherWidgetRow" style="font-size: 25px;margin-top: 10px;">{{WeatherDataENG.name}},{{WeatherDataENG.country}}</div>
+      
+      <div class="weatherWidgetRow" style="font-size: 9px;">{{WeatherDataENG.time_date}}</div>
+      <div class="weatherWidgetRow" style="font-size: 37px;margin-top: 5px;"><b>{{WeatherDataENG.temp_celcius}}°c</b></div>
+      <div class="weatherWidgetRow" style="font-size: 11px;margin-top: 2px;">Temp Min: {{WeatherDataENG.temp_min}}°c</div>
+      <div class="weatherWidgetRow" style="font-size: 11px;margin-top: 2px;">Temp Max: {{WeatherDataENG.temp_max}}°c</div>
+      <div class="rows3">
+        <div class="weatherWidgetRow" style="font-size: 12px; "><img class="weatherimage" src="http://openweathermap.org/img/w/{{WeatherDataENG.temp_feels_like_icon}}.png"/> {{WeatherDataENG.temp_feels_like}} </div>
+      </div>
+      <hr width="70% "style="border-top: 1px solid white;" >
+      <div class="weatherWidgetRow" style="font-size: 12px; margin-top: 8px;">Pressure: {{WeatherDataENG.pressure}} hPa</div>
+      <div class="weatherWidgetRow" style="font-size: 12px; margin-top: 0.2px;">Humidity: {{WeatherDataENG.main.humidity}}%</div>
+      <div class="weatherWidgetRow" style="font-size: 12px; margin-top: 0.2px;">visibility: {{WeatherDataENG.visibility}} km</div>
+
+      <hr width="70% "style="border-top: 1px solid white;" >
+      <div class="weatherWidgetRow" style="font-size: 12px; margin-top: 0.2px;">Sunrise: {{WeatherDataENG.sunrise_time}}</div>
+      <div class="weatherWidgetRow" style="font-size: 12px; margin-top: 0.2px;">Sunset: {{WeatherDataENG.sunset_time}} </div>
+    </div>
+    
+  </div>
+  
+  <div id="Weatherapp2">
+    <div id="divWeatherMain4">
+      <div *ngIf="WeatherDataAus.isDay" class="weatherWidgetRow">
+        <i class="fas fa-3x fa-sun sun"></i>  
+      </div>   
+      <div *ngIf="!WeatherDataAus.isDay" class="weatherWidgetRow">
+        <i class="fas fa-3x fa-moon moon"></i>  
+      </div>   
+      <div class="WeatherDataAus cloudDiv">
+        <i class="fas fa-cloud fa-3x cloud2"></i>
+      </div>
+      
+      <div class="weatherWidgetRow" style="font-size: 25px;margin-top: 10px;">{{WeatherDataAus.name}},{{WeatherDataAus.country}}</div>
+      
+      <div class="weatherWidgetRow" style="font-size: 9px;">{{WeatherDataAus.time_date}}</div>
+      <div class="weatherWidgetRow" style="font-size: 37px;margin-top: 5px;"><b>{{WeatherDataAus.temp_celcius}}°c</b></div>
+      <div class="weatherWidgetRow" style="font-size: 11px;margin-top: 2px;">Temp Min: {{WeatherDataAus.temp_min}}°c</div>
+      <div class="weatherWidgetRow" style="font-size: 11px;margin-top: 2px;">Temp Max: {{WeatherDataAus.temp_max}}°c</div>
+      <div class="rows3">
+        <div class="weatherWidgetRow" style="font-size: 12px; "><img class="weatherimage" src="http://openweathermap.org/img/w/{{WeatherDataAus.temp_feels_like_icon}}.png"/> {{WeatherDataAus.temp_feels_like}} </div>
+      </div>
+      <hr width="70% "style="border-top: 1px solid white;" >
+      <div class="weatherWidgetRow" style="font-size: 12px; margin-top: 8px;">Pressure: {{WeatherDataAus.pressure}} hPa</div>
+      <div class="weatherWidgetRow" style="font-size: 12px; margin-top: 0.2px;">Humidity: {{WeatherDataAus.main.humidity}}%</div>
+      <div class="weatherWidgetRow" style="font-size: 12px; margin-top: 0.2px;">visibility: {{WeatherDataAus.visibility}} km</div>
+    
+      <hr width="70% "style="border-top: 1px solid white;" >
+      <div class="weatherWidgetRow" style="font-size: 12px; margin-top: 0.2px;">Sunrise: {{WeatherDataAus.sunrise_time}}</div>
+      <div class="weatherWidgetRow" style="font-size: 12px; margin-top: 0.2px;">Sunset: {{WeatherDataAus.sunset_time}} </div>
+    </div>  
+    <div id="divWeatherMain5">
+      <div *ngIf="WeatherDataUs.isDay" class="weatherWidgetRow">
+        <i class="fas fa-3x fa-sun sun"></i>  
+      </div>   
+      <div *ngIf="!WeatherDataUs.isDay" class="weatherWidgetRow">
+        <i class="fas fa-3x fa-moon moon"></i>  
+      </div>   
+      <div class="WeatherDataUs cloudDiv">
+        <i class="fas fa-cloud fa-3x cloud2"></i>
+      </div>
+      
+      <div class="weatherWidgetRow" style="font-size: 25px;margin-top: 10px;">{{WeatherDataUs.name}},{{WeatherDataUs.country}}</div>
+      
+      <div class="weatherWidgetRow" style="font-size: 9px;">{{WeatherDataUs.time_date}}</div>
+      <div class="weatherWidgetRow" style="font-size: 37px;margin-top: 5px;"><b>{{WeatherDataUs.temp_celcius}}°c</b></div>
+      <div class="weatherWidgetRow" style="font-size: 11px;margin-top: 2px;">Temp Min: {{WeatherDataUs.temp_min}}°c</div>
+      <div class="weatherWidgetRow" style="font-size: 11px;margin-top: 2px;">Temp Max: {{WeatherDataUs.temp_max}}°c</div>
+      <div class="rows3">
+        <div class="weatherWidgetRow" style="font-size: 12px; "><img class="weatherimage" src="http://openweathermap.org/img/w/{{WeatherDataUs.temp_feels_like_icon}}.png"/> {{WeatherDataUs.temp_feels_like}} </div>
+      </div>
+      <hr width="70% "style="border-top: 1px solid white;" >
+      <div class="weatherWidgetRow" style="font-size: 12px; margin-top: 8px;">Pressure: {{WeatherDataUs.pressure}} hPa</div>
+      <div class="weatherWidgetRow" style="font-size: 12px; margin-top: 0.2px;">Humidity: {{WeatherDataUs.main.humidity}}%</div>
+      <div class="weatherWidgetRow" style="font-size: 12px; margin-top: 0.2px;">visibility: {{WeatherDataUs.visibility}} km</div>
+    
+      <hr width="70% "style="border-top: 1px solid white;" >
+      <div class="weatherWidgetRow" style="font-size: 12px; margin-top: 0.2px;">Sunrise: {{WeatherDataUs.sunrise_time}}</div>
+      <div class="weatherWidgetRow" style="font-size: 12px; margin-top: 0.2px;">Sunset: {{WeatherDataUs.sunset_time}} </div>
+    </div> 
+  </div>
+
+</div>
+
+
+
